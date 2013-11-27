@@ -1,0 +1,36 @@
+
+UploadFunctionalityTest:
+	Test->uploadFile
+		Given: User choses file on computer
+		When:  User clicks submit button
+		Then:  File should be uploaded 
+		And: the path on server should be displayed in status
+		And: file name should be displayed on page
+
+	Test->progressBarShouldBeDisplayedWhileUploading		
+		Given: User choses file on his computer
+		When: User clicks submit button
+		Then: Progress bar shoud be displaeyd
+
+	Test->shoudChangeTitelWhileUploading	
+		Given: User choses file on his computer
+		When: USer clicks submit 
+		Then: User can enter titel text while uploading
+
+PostRequestTest		
+
+	Test->postRequestShouldContainsConfirmationMessage
+		Given:	Post request that schould contains confirmation message when upload is done
+		When: 	Post was sent
+		Then: 	Response contains confirmation message
+		
+	Test->postRequestShouldContainSystemPathAndTitle
+		Given:	Post request that schould contains title and system path where file uploaded 
+		When: 	Post was sent
+		Then: 	Response contains system path and title
+		
+Wasn't done
+Given:	Two users want to upload files at the same time
+When:	Users submit their upload
+Then:	Both files are uploaded
+
